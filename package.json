@@ -1,0 +1,72 @@
+{
+  "name": "fileshare",
+  "version": "0.0.0",
+  "description": "fileshare",
+  "license": "MIT",
+  "repository": "",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib && rimraf coverage",
+    "format": "prettier --write \"{src,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
+    "lint": "tslint --fix --format verbose \"src/**/*.ts\"",
+    "build": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
+    "pretest": "npm run clean && npm run format && npm run lint",
+    "test": "jest --coverage --verbose",
+    "coverage": "jest --coverage",
+    "watch": "npm run build -- --watch",
+    "watch:test": "jest --watch"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "moment": "^2.20.1",
+    "multer": "^0.1.8",
+    "mysql": "^2.15.0",
+    "nunjucks": "^3.0.1",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.5",
+    "@types/node": "^8.0.0",
+    "coveralls": "^2.0.0",
+    "jest": "^20.0.4",
+    "jest-environment-node-debug": "^2.0.0",
+    "prettier": "^1.5.2",
+    "rimraf": "^2.0.0",
+    "ts-jest": "^20.0.7",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.0.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "tslint-config-prettier": "^1.1.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testEnvironment": "node"
+  }
+}

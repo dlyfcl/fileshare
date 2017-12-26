@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>用户列表</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/back-user.css" class="css">
+</head>
+
+<body>
+    <!-----导航------>
+    <nav class="navbar navbar-default">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">后台管理</a>
+
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#admins">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="admins">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/admin/users">
+                                <span class="glyphicon glyphicon-user"></span> 用户管理</a>
+                        </li>
+                        <li>
+                            <a href="/admin/file/category">
+                                <span class="glyphicon glyphicon-list-alt"></span> 文件管理</a>
+                        </li>
+                        <li>
+                            <a href="/admin/sites">
+                                <span class="glyphicon glyphicon-signal"></span> 网站数据统计</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="name">
+                                {{admin}}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/admin/update">
+                                        <span class="glyphicon glyphicon-cog"></span> 个人设置</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a id="logout" href="/admin/login">
+                                <span class="glyphicon glyphicon-off"></span> 退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </nav>
+    <!------内容------>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-1">
+                <nav id="nav1">
+                    <ul>
+                        <li class="active" id="muser">
+                            <a href="#">用户管理</a>
+                        </li>
+                        <li id="suser">
+                            <a href="#">用户搜索</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-10">
+                用户管理
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li class="active" id="showuser">
+                        <a href="#lists" data-toggle="tab">用户列表</a>
+                    </li>
+                    <li id="searchuser">
+                        <a href="#search" data-toggle="tab">用户搜索</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active clearfix" id="lists">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>用户ID</td>
+                                    <td>用户名</td>
+                                    <td>邮箱</td>
+                                    <td>注册日期</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="search">
+                        <div class="alert alert-info">
+                            <a class="close" data-dismiss="alert" href="#" aria-hidden="true">
+                                &times;
+                            </a>
+                            <strong>技巧提示:</strong>支持模糊搜索和匹配搜索，匹配搜索使用*代替！
+                        </div>
+                        <form action="#" role="form" id="searchform" onsubmit="return Search()">
+                            <div class="form-group">
+                                <label for="username" class="control-label">用户名:</label>
+                                <input type="text" class="form-control" placeholder="请输入用户名" id="username" required="required">
+                            </div>
+                            
+                            
+                            <input type="button" class="btn btn-default" value="提交" id='submit'>
+                        </form>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>用户ID</td>
+                                    <td>用户名</td>
+                                    <td>邮箱</td>
+                                    <td>注册日期</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center col-sm-6 col-sm-offset-3">
+        <p>Copyright@2012-2015 ICP备xxxxxxxx号</p>
+    </footer>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/js/newTr.js"></script>
+    <script src="/js/newUl.js"></script>
+    <script src="/js/newPages.js"></script>
+    <script src="/js/resetPwd.js"></script>
+    <script src="/js/deleUser.js"></script>
+    <script src="/js/searchUser.js"></script>
+    
+
+   
+</body>
+
+</html>

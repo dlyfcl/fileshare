@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册页面</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/register_detail.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <h2>个人信息详情</h2>
+            <form>
+                <!-- 用户名 -->
+                <div class="form-group has-feedback">
+                    <label for="username">用户名</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input id="username" class="form-control" placeholder="请输入用户名" maxlength="20" type="text">
+                    </div>
+
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class=" glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+
+                <!-- 生日 -->
+                <div class="form-group has-feedback">
+                    <label for="birth">生日</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                        <div class="select">
+                            <select class="col-md-4">
+                            <option>1995年</option>
+                            <option>1996年</option>
+                            <option>1997年</option>
+                        </select>
+                        <select class="col-md-4">
+                            <option>1月</option>
+                            <option>2月</option>
+                            <option>3月</option>
+                            <option>4月</option>
+                            <option>5月</option>
+                            <option>6月</option>
+                            <option>7月</option>
+                            <option>8月</option>
+                            <option>9月</option>
+                            <option>10月</option>
+                            <option>11月</option>
+                            <option>12月</option>
+                        </select>
+                        <select class="col-md-4">
+                            <option>1日</option>
+                            <option>2日</option>
+                            <option>3日</option>
+                            <option>4日</option>
+                            <option>5日</option>
+                            <option>6日</option>
+                            <option>7日</option>
+                            <option>8日</option>
+                            <option>9日</option>
+                            <option>10日</option>
+                            <option>11日</option>
+                            <option>12日</option>
+                            <option>13日</option>
+                            <option>14日</option>
+                            <option>14日</option>
+                            <option>15日</option>
+                            <option>16日</option>
+                            <option>17日</option>
+                            <option>18日</option>
+                            <option>19日</option>
+                            <option>20日</option>
+                            <option>21日</option>
+                            <option>22日</option>
+                            <option>23日</option>
+                            <option>24日</option>
+                            <option>24日</option>
+                            <option>25日</option>
+                            <option>26日</option>
+                            <option>27日</option>
+                            <option>28日</option>
+                            <option>29日</option>
+                            <option>30日</option>
+                            <option>31日</option>
+                        </select>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 修改密码 -->
+                <div class="form-group has-feedback">
+                        <label for="changepwd" >修改密码</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input id="changepwd" class="form-control" maxlength="20" type="password" disabled="disabled">
+                        </div>
+                        <span style="color:red;display: none;" class="tips"></span>
+                        <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        <a href="#" id="sure">确定</a> <a href="#" id="cgpwd">修改</a>
+                    </div>
+                <!-- 性别 -->
+                <div class="form-group has-feedback">
+                    <label for="sex">性别</label>
+                    <div class="input-group " id="sex">
+                     <span class="input-group-addon"><span class="glyphicon glyphicon-heart"></span></span>
+                        <input id="man" name="sex" type="radio">男
+                        <input id="woman" type="radio" name="sex">女
+                    </div>
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+                <!-- 手机号码 -->
+                <div class="form-group has-feedback">
+                    <label for="phoneNum">手机号码</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                        <input id="phoneNum" class="form-control" placeholder="请输入手机号码" maxlength="11" type="text">
+                    </div>
+                    <span style="color:red;display: none;" class="tips"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+               <div class="form-group cg">
+                        <p data-toggle="modal" data-target="#login">修改头像</p>
+                        <div class="box">
+                            <img src="/img/tx1.jpg" alt="" id="img1">
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <input class="form-control btn btn-primary" id="sub" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" type="button">
+                </div>
+
+                <div class="form-group">
+                    <input value="重&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置" id="reset" class="form-control btn btn-danger" type="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">选择你喜欢的头像</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="/img/tx1.jpg" alt="">
+                    <img src="/img/tx2.jpg" alt="">
+                    <img src="/img/tx3.jpg" alt="">
+                    <img src="/img/tx4.jpg" alt="">
+                    <img src="/img/tx5.jpg" alt="">
+                    <img src="/img/tx6.jpg" alt="">
+                    <img src="/img/tx7.jpg" alt="">
+                    <img src="/img/tx8.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="changeHD">确定</button>
+                </div>
+            </div>
+        </div>
+     </div>
+     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

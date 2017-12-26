@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>管理员登录</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/manager-login.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="col-sm-12">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">管理员</a>
+        </div>
+        <div class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">回到首页</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="col-sm-12">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="col-sm-8">
+        <h1>-管理员登录</h1>
+      </div>
+      <div class="col-sm-4  formdiv">
+        <form class="" role="form">
+          <div class="form-group">
+            <label for="" class="control-label">
+              <h3>管理员登录</h3>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="" class="control-label">管理账号</label>
+            <i class="msg"> 您输入的账号不存在</i>
+            <div class="">
+              <input type="text" class="form-control" placeholder="请输入您的管理账号" id="username" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="control-label">账号密码</label>
+            <i class="msg"> 密码错误</i>
+            <div class="">
+              <input type="password" class="form-control" placeholder="请输入您的账号密码" id="password" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="control-label">验证码</label>
+            <i class="msg"> 验证码错误</i>
+            <div class="">
+              <input type="text" class="form-control confirmcode" placeholder="请输入验证码" id="ck" />
+              <div class="confirmcodeimg col-sm-4" id="Mconfirm"></div>
+              <span class="Mclick" id="Mclick">换一个验证码</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <input type="button" class="form-control btn btn-info btn-login" value="登录 " id="Msub" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="col-lg-12 footer">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <ul class="about col-sm-12">
+        <li>
+          <a href="#">关于我们</a>
+        </li>
+        <li>
+          <a href="#">法律声明</a>
+        </li>
+        <li>
+          <a href="#">廉政举报</a>
+        </li>
+        <li>
+          <a href="#">友情链接</a>
+        </li>
+      </ul>
+      <ul class="brand col-sm-12">
+        <li>
+          <a href="#">云分享集团</a>
+        </li>
+        <li>
+          <a href="#">项目介绍</a>
+        </li>
+        <li>
+          <a href="#">热门排行</a>
+        </li>
+        <li>
+          <a href="#">热门视频</a>
+        </li>
+        <li>
+          <a href="#">下载中心</a>
+        </li>
+        <li>
+          <a href="#">友情链接</a>
+        </li>
+      </ul>
+      <p>&copy;&nbsp;2009-2017&nbsp;Aliyun.com版权所有</p>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/js/manager-login.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

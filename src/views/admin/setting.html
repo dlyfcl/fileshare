@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>管理员个人设置</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #nav1 ul {
+            padding-left: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #nav1 ul li {
+            line-height: 40px;
+            padding-left: 15px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        #nav1 ul li a:hover {
+            text-decoration: none;
+        }
+
+        #nav1 ul li.active,
+        #nav1 ul li:hover {
+            cursor: pointer;
+            background: lightskyblue;
+        }
+
+        #nav1 ul li.active a,
+        #nav1 ul li:hover>a {
+            color: #fff;
+        }
+
+        .col-1 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #search .alert {
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        #addModal .body {
+            padding: 10px;
+        }
+
+        .progress>div {
+            transition: width 1s linear;
+        }
+
+        .manager-pic {
+            background: url(/img/manager-pic.jpg) no-repeat center;
+            background-size: 100% 100%;
+        }
+
+        .show-pwd {
+            margin-top: 10px;
+            color: #2aabd2;
+            font-size: 8px;
+            cursor: pointer;
+        }
+
+        .manager-modify-sub {
+            background: #87cefa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 30px;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .msg {
+            color: red;
+            display: none;
+        }
+
+        #logout {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!---导航-->
+    <nav class="navbar navbar-default">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">后台管理</a>
+                    <!--汉堡按钮-->
+
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#admins">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="admins">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/admin/users">
+                                <span class="glyphicon glyphicon-user"></span> 用户管理</a>
+                        </li>
+                        <li>
+                            <a href="/admin/file/category">
+                                <span class="glyphicon glyphicon-list-alt"></span> 文件管理</a>
+                        </li>
+                        <li>
+                            <a href="/admin/sites">
+                                <span class="glyphicon glyphicon-signal"></span> 网站数据统计</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="name">
+                                {{admin}}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/admin/update">
+                                        <span class="glyphicon glyphicon-cog"></span> 个人设置</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a id="logout" href="/admin/login">
+                                <span class="glyphicon glyphicon-off"></span> 退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </nav>
+    <!--内容-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-1">
+                <nav id="nav1">
+                    <ul>
+                        <li class="active" id="adminAside">
+                            <a href="#">管理员信息</a>
+                        </li>
+                        <li id="changeAside">
+                            <a href="#">修改密码</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-10">
+                管理员个人信息设置
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li class="active" id="adminTab">
+                        <a href="#adminShow" data-toggle="tab">管理员个人信息</a>
+                    </li>
+                    <li id="changeTab">
+                        <a href="#changeShow" data-toggle="tab">修改密码</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="adminShow">
+                        <div class="col-lg-8 col-lg-offset-1" style="margin-top: 50px;">
+                            <div class="manager-pic col-lg-3" style="border: 1px solid #f8f8f8;height: 175px"></div>
+                            <div class="col-lg-6 col-lg-offset-1">
+                                <label for="" class="control-label">管理员账号</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="admName" readonly="readonly">
+                                </div>
+                                <label for="" class="control-label">管理员密码</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="admPwd" readonly="readonly">
+                                </div>
+                                <span class="glyphicon glyphicon-eye-open show-pwd" id="show-pwd">显示/隐藏密码</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="changeShow">
+                        <div class="col-lg-8 col-lg-offset-1" style="margin-top: 50px">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <label for="" class="control-label">管理员账号</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="admName_Cha" readonly="readonly">
+                                </div>
+                                <label for="" class="control-label">请输入原先密码</label>
+                                <i class="msg">密码错误</i>
+                                <div class="">
+                                    <input type="password" class="form-control" id="admPwd_Cha">
+                                </div>
+                                <label for="" class="control-label">请输入新的密码</label>
+                                <i class="msg">与旧密码相同</i>
+                                <i class="msg">新密码不能为空</i>
+                                <div class="">
+                                    <input type="password" class="form-control" id="admPwd_New">
+                                </div>
+                                <label for="" class="control-label">再次确认新密码</label>
+                                <i class="msg">两次输入不一致</i>
+                                <div class="">
+                                    <input type="password" class="form-control" id="admPwd_reNew">
+                                </div>
+                                <input type="button" id="sub" class="col-lg-3 col-lg-offset-4 manager-modify-sub" value="提交">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center col-sm-6 col-sm-offset-3">
+        <p>Copyright@2012-2015 ICP备xxxxxxxx号</p>
+    </footer>
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/manager-setting.js"></script>
+
+</body>
+
+</html>

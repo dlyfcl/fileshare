@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/show.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header myNavbar-header">
+            <button class="navbar-toggle myNavbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand logo">云分享</a>
+        </div>
+        <div class="navbar-collapse collapse myCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" class="" type="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu myDropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="index.html"><span
+                                class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;前台首页</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人主页</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;个人设置</a></li>
+                        <li><a href="index.html"><span
+                                class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;账户中心</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的收藏</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="quit"><a href="#bbs"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="col-sm-12">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="sp">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>文件</th>
+                        <th>上传者</th>
+                        <th>大小</th>
+                        <th>下载量</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="row footer">
+    <p class="text-center">
+        copyright&copy;2012-2015&nbsp;&nbsp;&nbsp;ICP备xxxxxxxx号-4
+    </p>
+</div>
+
+<script src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src='https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script>
+    var URL = window.location.pathname;
+    var type;
+    switch(URL){
+	case "/hots/video":
+		type="video";
+		break;
+	case "/hots/zip":
+		type="zip";
+		break;
+	case "/hots/image":
+		type="image";
+		break;
+	case "/hots/doc":
+		type="doc";
+		break;
+	}
+	$("title").html(type);
+    $.ajax({
+            url: '/api/files/hots?type='+type,
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var trs = $("<tr></tr>");
+                        trs.append("<td>" + data[i].filename + "</td>");
+                        trs.append("<td>" + data[i].username + "</td>");
+                        trs.append("<td>" + data[i].size + "</td>");
+                        trs.append("<td>" + data[i].downloads + "</td>");
+                        $("tbody").append(trs);
+                    }
+                }
+            }
+        })
+</script>
+<script src="js/show.js"></script>
+
+</body>
+</html>
+

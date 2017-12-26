@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width = device-width,initial-scale=1">
+    <title>云分享</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top til">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle myNavbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="" src="img/cloud.png">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav nav-pills navbar-left">
+                <li role="presentation"><a href="#int">项目介绍</a></li>
+                <li role="presentation"><a href="#pro">项目理念</a></li>
+                <li role="presentation"><a href="#file">热门文件</a></li>
+                <li role="presentation"><a href="#hot">分类热门</a></li>
+            </ul>
+            <ul class="nav nav-pills navbar-right">
+                <li><a href="/user/register">注册</a></li>
+                <li><a href="/user/login">登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container bg">
+    <h1>全球领先、安全、稳定的云存储产品</h1>
+    <h2>计算、存储、网路、安全、大数据、人工智能祝您飞跃发展</h2>
+</div>
+<a name="int"></a>
+<div class="container int">
+    <h1>项目介绍</h1>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2 text-center">
+            <img src="img/save.png" alt="">
+        </div>
+        <div class="panel panel-default col-sm-7">
+            <div class="panel-body">
+                <p>
+                    提供拥有灵活性和按需功能的新一代存储服务，从而防止了成本失控，并能满足不断变化的业务重心及法规要求所形成的多样化需求。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2 text-center">
+            <img src="img/share.png" alt="">
+        </div>
+        <div class="panel panel-default col-sm-7">
+            <div class="panel-body">
+                <p>
+                    数据保管箱项目已经在国内开展了一定时间，取得用户的认可，为解决非结构化数据不断增长带来的挑战，旨在通过网络平台，展示开放整合式存储技术如何与云计算一同演化。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2 text-center">
+            <img src="img/file.png" alt="">
+        </div>
+        <div class="panel panel-default col-sm-7">
+            <div class="panel-body">
+                <p>
+                    为进一步推出云存储产品，提升下载速度和服务容量，需要引进SAN技术，同时结合国际部分技术，完成基于数据保管箱产品的云存储服务，研究开发内容。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<a name="pro"></a>
+<div class="container pro">
+    <h1>项目理念</h1>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <h2>云存储，用云分享就够了</h2>
+            <p>随时随地 办公如此轻松全终端覆盖,随时随地分享数据与协同办公，多种共享方式，即时消息通知，帮助工作高效完成</p>
+            <p>7×24小时 我们永远在线为您服务专属售后经理，7x24小时随时解决您使用过程中的疑问服务50类行业，千锤百炼打造极致用户体验10年专业云服务运营，我们做到对您始终如一</p>
+        </div>
+        <div class="col-sm-5 text-center">
+            <img src="img/pro.png"/>
+        </div>
+    </div>
+</div>
+<a name="file"></a>
+<div class="container-fluid file">
+    <h1>热门文件</h1>
+    <ul class="row" id="tp">
+        
+    </ul>
+</div>
+<a name="hot"></a>
+<div class="container hot">
+    <h1>分类热门</h1>
+    <div class="col-sm-3 text-left Video">
+        <div>
+            <h4>热门视频</h4>
+            <a class="more" name="video" href="/hots/video">更多>></a>
+        </div>
+        <hr>
+        <ul id="rmsp">
+           
+        </ul>
+    </div>
+    <div class="col-sm-3 text-left Audio">
+        <div>
+            <h4>热门压缩文件</h4>
+            <a class="more"  name="audio" href="/hots/zip">更多>></a>
+        </div>
+        <hr>
+        <ul id="rmys">
+           
+        </ul>
+    </div>
+    <div class="col-sm-3 text-left Image">
+        <div>
+            <h4>热门图片</h4>
+            <a class="more"  name="image" href="/hots/image">更多>></a>
+        </div>
+        <hr>
+        <ul id="rmtp">
+            
+        </ul>
+    </div>
+    <div class="col-sm-3 text-left Document">
+        <div>
+            <h4>热门文章</h4>
+            <a class="more" name="document" href="/hots/doc">更多>></a>
+        </div>
+        <hr>
+        <ul id="rmwz">
+           
+        </ul>
+    </div>
+</div>
+<footer>
+    <hr>
+    <div class="text-center">&copy;云分享</div>
+</footer>
+</div>
+<script typet="text/javascript" src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $.ajax({
+            url: '/api/files/hots?type=video',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li><p></p></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='normal'>" + (i+1) + "<span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='name'>" + data[i].filename + "</span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='text-right peo'>" + data[i].downloads + "</span></a>");
+                        $("#rmsp").append(lis);
+                    }
+                }
+            }
+        })
+    $.ajax({
+            url: '/api/files/hots?type=zip',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li><p></p></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='normal'>" + (i+1) + "<span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='name'>" + data[i].filename + "</span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='text-right peo'>" + data[i].downloads + "</span></a>");
+                        $("#rmys").append(lis);
+                    }
+                }
+            }
+        })
+    $.ajax({
+            url: '/api/files/hots?type=image',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li><p></p></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='normal'>" + (i+1) + "<span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='name'>" + data[i].filename + "</span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='text-right peo'>" + data[i].downloads + "</span></a>");
+                        $("#rmtp").append(lis);
+                    }
+                }
+            }
+        })
+    $.ajax({
+            url: '/api/files/hots?type=doc',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li><p></p></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='normal'>" + (i+1) + "<span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='name'>" + data[i].filename + "</span></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><span class='text-right peo'>" + data[i].downloads + "</span></a>");
+                        $("#rmwz").append(lis);
+                    }
+                }
+            }
+        })
+    $.ajax({
+            url: '/api/files/hots?type=image',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li class='col-md-3 col-sm-4 col-xs-6 text-center'></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><img src='img/pic.png'></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><p>文件名：<span>"+data[i].filename+"</span></p></a>");
+                        $("#tp").append(lis);
+                    }
+                }
+            }
+        })
+
+    $.ajax({
+            url: '/api/files/hots?type=video',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li class='col-md-3 col-sm-4 col-xs-6 text-center'></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><img src='img/videos.png'></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><p>文件名：<span>"+data[i].filename+"</span></p></a>");
+                        $("#tp").append(lis);
+                    }
+                }
+            }
+        })
+  	$.ajax({
+            url: '/api/files/hots?type=zip',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li class='col-md-3 col-sm-4 col-xs-6 text-center'></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><img src='img/zip.png'></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><p>文件名：<span>"+data[i].filename+"</span></p></a>");
+                        $("#tp").append(lis);
+                    }
+                }
+            }
+        })
+	$.ajax({
+            url: '/api/files/hots?type=doc',
+            type: "get",
+            success: function (data, status) {
+                if (data != 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var lis = $("<li class='col-md-3 col-sm-4 col-xs-6 text-center'></li>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><img src='img/article.png'></a>");
+                        lis.append("<a href='/user/"+data[i].user+"/file/"+data[i].file+"'><p>文件名：<span>"+data[i].filename+"</span></p></a>");
+                        $("#tp").append(lis);
+                    }
+                }
+            }
+        })
+	
+</script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

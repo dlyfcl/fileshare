@@ -1,0 +1,93 @@
+body{
+	background: url(../img/bg.png);
+	background-size: 100% 150%;
+}
+.formdiv{
+	margin: 50px 0px;
+	position: relative;
+	z-index: 111;
+	background: #fff;
+	border: 1px solid #CCCCCC;
+}
+.confirmcode{
+	float: left;
+	width: 50%;
+}
+.confirmcodeimg{
+	/*margin-top:-10px;*/
+	float: right;
+	width: 25%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	border: 1px solid #ccc;
+	moz-user-select: -moz-none; 
+	-moz-user-select: none; 
+	-o-user-select:none; 
+	-khtml-user-select:none; /* you could also put this in a class */ 
+	-webkit-user-select:none;/* and add the CSS class here instead */ 
+	-ms-user-select:none; 
+	user-select:none
+}
+.Mclick{
+  margin-left: 5px;
+  font-size: 1.2rem;
+	color: #34b0d5;
+	cursor: pointer;
+	vertical-align: bottom;
+	moz-user-select: -moz-none; 
+	-moz-user-select: none; 
+	-o-user-select:none; 
+	-khtml-user-select:none; /* you could also put this in a class */ 
+	-webkit-user-select:none;/* and add the CSS class here instead */ 
+	-ms-user-select:none; 
+	user-select:none
+}
+.btn-login{
+	margin-top: 20px;
+}
+.footer{
+	/*position: fixed;
+	bottom: 0;
+	left: 0;*/
+	width: 100%;
+	background: rgba(0,0,0,.7);
+}
+.footer ul{
+	margin: 10px 0px;
+	/*border: 1px solid #000;*/
+}
+.footer ul li{
+	margin-right:none ;
+	list-style: none;
+	float: left;
+}
+.footer ul.about li{
+	margin: 15px;
+}
+.footer ul.about li a{
+	font-size: 1.6rem;
+}
+.footer ul.brand li{
+	margin: 4px;
+}
+.footer ul li a{
+	color: #ccc;
+	text-decoration: none;
+}
+.footer ul li a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.footer p{
+	text-align: center;
+	color: #ccc;
+}
+h1{
+	margin-top: 30%;
+	color: #CCCCCC;
+}
+.msg{
+	display: none;
+	color: red;
+}

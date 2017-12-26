@@ -1,0 +1,327 @@
+/*头部*/
+nav {
+    height: 70px;
+    color: white;
+    background: url("/img/bg4.jpg");
+}
+
+nav > div:nth-child(2) {
+    line-height: 70px;
+}
+
+nav > div:nth-child(2) > i {
+    position: relative;
+    top: 5px;
+}
+
+nav > div > a {
+    float: right;
+    margin-right: 2rem;
+    color: white;
+}
+
+nav > div > a:hover {
+    color: lightskyblue;
+}
+
+.yun {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: '仿宋';
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+.left {
+    /*height: 1000px;*/
+    background: #EFF4F8;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+ul.list-group {
+    margin-top: 1rem;
+}
+
+.list-group-item {
+    padding-left: 3.5rem;
+}
+
+.list-group-item:nth-child(1) {
+    padding-left: 2rem;
+}
+
+.list-group-item.active {
+    color: #3b8cff;
+    background-color: #E3E8EB;
+    border-color: #E3E8EB;
+}
+
+.list-group-item {
+    background-color: #EFF4F8;
+    border: none;
+}
+
+ul li:hover {
+    background: #E3E8EB;
+}
+
+.right-header {
+    margin-top: 1.3rem;
+}
+
+.right-header > button {
+    cursor: pointer;
+    width: 8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.right-header > button.btn-default {
+    color: #4D96FF;
+    background-color: #fff;
+    border: 1px solid #c0d9fe;
+}
+
+.right-header > button.btn-default:hover {
+    color: #77Afff;
+}
+
+.dl {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    display: none;
+}
+
+.dl a, .dl span {
+    color: gray;
+}
+
+/*文件*/
+#files {
+    position: absolute;
+    left: 2em;
+    top: 1.3em;
+    width: 8rem;
+    height: 2.3rem;
+    opacity: 0;
+}
+
+/*图片*/
+.photo {
+    overflow-y: auto;
+}
+
+#smImg div img {
+    width: 100%;
+}
+
+/*选中*/
+#smImg div {
+    display: inline-block;
+    position: relative;
+    border: 3px solid lightgrey;
+    border-radius: 5px;
+    padding: 1px;
+    width: 18rem;
+    margin: 1rem 0.2rem 0rem 0.3rem;
+}
+
+#smImg div a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+input {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: .4rem 0 0 0.2rem;
+}
+
+/*预览*/
+.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.photo .show .pre {
+    position: absolute;
+    top: 45%;
+    left: 2rem;
+    font-size: 4rem;
+}
+
+.photo .show .next {
+    position: absolute;
+    top: 45%;
+    right: 2rem;
+    font-size: 4rem;
+}
+
+.photo .show .bigimg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+}
+
+/*文档*/
+.doc-container {
+    line-height: 32px;
+}
+
+.doc-tag {
+    color: #FFAA00;
+    margin-right: 20px;
+}
+
+/*视频*/
+.vd {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+
+.close {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.video-container {
+    line-height: 32px;
+}
+
+.video label, .doc label, .zip label, .other label {
+    position: absolute;
+    margin-left: 28px;
+}
+
+.video-tag {
+    margin-top: 8px;
+    margin-right: 20px;
+    float: left;
+    color: #8183F1;
+}
+
+.vdname {
+    float: left;
+}
+
+.vdname:hover,
+.zipname:hover,
+.othername:hover,
+.docname:hover {
+    color: #3C8CFF;
+}
+
+/*音频*/
+.audio-container {
+    line-height: 32px;
+}
+
+.audio-container span {
+    cursor: pointer;
+}
+
+.audio-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.audio-container .play img {
+    cursor: pointer;
+}
+
+.audio-name:hover {
+    color: #3C8CFF;
+}
+
+.music-tag {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #EB8789;
+}
+
+/*压缩包*/
+.zip-container {
+    line-height: 32px;
+}
+
+.zip-tag {
+    color: #80CD46;
+    margin-right: 20px;
+}
+
+/*其他*/
+.other-container {
+    line-height: 32px;
+}
+
+.other-tag {
+    color: #A83EDC;
+    margin-right: 20px;
+}
+
+/*表格字体大小*/
+table {
+    font-size: 0.8rem;
+    font-family: "Microsoft YaHei UI";
+}
+
+table th {
+    font-weight: normal;
+}
+
+/*分享*/
+.share-type {
+    padding-left: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+    border: 2px solid lightskyblue;
+    border-radius: 5px;
+}
+
+.org {
+    line-height: 32px;
+}
+
+.page {
+    float: right;
+}

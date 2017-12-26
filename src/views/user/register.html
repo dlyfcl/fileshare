@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <form action="" method="post" class="col-sm-6">
+                <span>用户注册</span>
+                <input type="email" placeholder="请输入邮箱" class="email" id="emal" />
+                <p class='tip'></p>
+                <span>设置密码</span>
+                <input type="password" placeholder="请设置密码,字母、数字、特殊字符至少两种" class="pwd" id="pwd" />
+                <p class='tip'></p>
+                <span>确认密码</span>
+                <input type="password" placeholder="请确认密码" class="pwd2" id="pwd2" />
+                <p class='tip'></p>
+                <input type="button" id="sub" name="sub" value="注册">
+            </form>
+        </div>
+        <i id="ts">已有账号，点击登录</i>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="/js/registerRegex.js"></script>
+</body>
+
+
+</html>

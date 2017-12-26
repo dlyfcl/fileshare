@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none
+}
+.til{
+    line-height: 60px;
+    background: transparent;
+    border: none;
+}
+.til span, .til a{
+    color: #fff;
+}
+.til li:before{
+    background: transparent;
+}
+.til li:hover a{
+    color: #8a8a8a;
+}
+.myNavbar-toggle{
+    margin-top: 10px;
+}
+.bg{
+    width: 100%;
+    padding: 200px 0;
+    height: 650px;
+    background: url("../img/bg4.jpg") no-repeat;
+    background-size: cover
+}
+h1,.bg h2{
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-family: 微软雅黑;
+}
+.int h1, .pro h1, .file h1, .hot h1{
+    color: #666;
+}
+.int, .file{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background: #fcfcfc;
+}
+.pro, .hot{
+    padding: 50px 0;
+}
+.int .row{
+    margin: 20px auto;
+}
+.pro h2{
+    line-height: 100px;
+    color: #999;
+}
+.pro p{
+    font-size: 22px;
+    color: #ccc;
+}
+.pro img{
+    width: 100%;
+}
+.file ul{
+    height: 620px;
+    padding: 20px 50px 0 50px;
+    overflow:hidden;
+}
+.file ul li{
+    text-align: center;
+    height: 150px;
+}
+.file ul li img{
+    height: 120px;
+}
+.file ul li img:hover{
+    transform: rotate(3deg) scale(1.05);
+}
+.hot ul li{
+    border-bottom: 1px solid #eee;
+}
+.hot ul li .No1{
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    background: #ff191f;
+}
+.hot ul li .name{
+    color: #666;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 微软雅黑;
+}
+.hot ul li:nth-child(1) .name{
+    font-size: 18px;
+}
+.hot ul li .peo{
+    float: right;
+    line-height: 24px;
+    font-size: 14px;
+    color: #999999;
+}
+.hot ul li .author{
+    position: absolute;
+    bottom: 20px;
+}
+.hot ul li .No2, .hot ul li .No3, .hot ul li .normal{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background: #ff713b;
+}
+.hot ul li .No3{
+    background: #ffce1b;
+}
+.hot ul li .normal{
+    color: #333;
+    background: #ccc;
+}
+.hot ul li .name{
+    margin-left: 10px;
+}
+h1{
+    margin-bottom: 30px;
+}
+h4{
+    display: inline-block;
+}
+.more{
+    line-height: 39px;
+    float: right;
+    color: #000;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 640px) {
+.container{
+    margin-left: -6px;
+    width: 100%;
+}
+.int, .pro, .file, .hot{
+    margin-left: 4px;
+}
+.navbar-toggle{
+    margin-right: -12px;
+}
+.navbar-header{
+    width: 100%;
+}
+.bg{
+    width: 107%;
+	margin-top:-70px;
+	height:30px;
+}
+  h1,.bg h2{
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-family: 微软雅黑;
+    font-size:20px;
+}
+.bg h2{
+    font-size:12px;
+}
+.int img{
+    display:none;
+}
+.pro h2{
+    line-height: 30px;
+    font-size:20px;
+}
+.pro p{
+    line-height: 20px;
+    font-size:16px;
+}
+.file ul{
+    padding:0;
+}
+}

@@ -1,0 +1,31 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+#nav1 ul{
+    padding-left:0;
+    border:1px solid #ddd;
+    border-radius: 5px;
+}
+#nav1 ul li{
+    line-height: 40px;
+    padding-left:15px;
+
+    border-bottom:1px solid #ddd;
+}
+#nav1 ul li a:hover{
+    text-decoration: none;
+}
+#nav1 ul li.active,#nav1 ul li:hover{
+    background: lightskyblue;
+}
+#nav1 ul li.active a,#nav1 ul li:hover>a{
+    color:#fff;
+}
+footer{
+    margin-top:25px;
+    border-top:1px solid #ddd;
+}
+#logout{
+	cursor: pointer;
+}

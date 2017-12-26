@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>-文件详情页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap-grid.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap-reboot.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/user.css">
+  <link rel="stylesheet" href="/css/filedetails.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="col-0 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+
+    </div>
+    <div class="col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
+      <i class="fa fa-cloud fa-2x"></i>
+      <a href="/" class="yun">云分享</a>
+    </div>
+    <div class="col-1 col-sm-1 col-md-2 col-lg-3 col-xl-5">
+
+    </div>
+    <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-2">
+      <a href="/" id="back">退出</a>
+      <a href="#" id="user"></a>
+    </div>
+    <div class="col-0 col-sm-1 col-md-1 col-lg-2 col-xl-1">
+
+    </div>
+  </nav>
+  <div class='content'>
+    <div class='details'>
+     <table>
+       <thead>
+          <tr>
+              <th>文件名称</th>
+              <th>类型</th>
+              <th>大小</th>
+            </tr>
+       </thead>
+       <tbody>
+          <tr>
+              
+          </tr>
+       </tbody>
+     </table>
+    </div>
+    <div>
+      <button class="btn btn-primary share" id="share">分享</button>
+      <button class="btn btn-primary download">下载</button>
+    </div>
+    <div class="bdsharebuttonbox share-type">
+      <a href="#" class="bds_more" data-cmd="more"></a>
+      <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+      <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+      <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+  </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.js"></script>
+  <script src="/js/user.js"></script>
+  <script src="/js/filedetails.js"></script>
+  <script>
+    var timer = null;
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "1",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "2",
+            "bdSize": "24"
+        }, "share": {}
+    };
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    $('#share').on('click', function () {
+        $('.share-type').fadeIn(500);
+        timer = setTimeout(function () {
+            $('.share-type').css('border', 'none');
+        }, 1000);
+    });   
+</script>
+</body>
+
+</html>
